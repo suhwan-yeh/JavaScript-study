@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //함수 외부 영역(전역 스코프)
+        let a = 10; // 전역변수메모리 a
+        const b = 20; // 전역상수메모리 b
+
+
+        function sum(){
+
+            //함수 내부 영역(지역 스코프)
+            let a = 50; // 지역변수 메모리 a
+            const b = 70; // 지역상수 메모리 b
+            console.log(`함수 내부 a변수값 출력 : ${a}`);
+            console.log(`함수 내부 b변수값 출력 : ${b}`);
+        }
+        sum();
+        //전역 스코프랑 지역스코프 같은 함수 선언했을때
+        //지역 스코프 내부에서 출력하면 지역스코프에 있는 함수가 출력됨
+        
+        //전역 스코프랑 지역스코프 같은 함수 선언했을때
+        //전역 스코프 외부에서 출력하면 전역스코프에 있는 함수 출력됨됨
+        console.log(a);
+        console.log(b);
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

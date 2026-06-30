@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            스코프란? 
+            - 변수나 함수를 사용할 수 있는 코드 범위
+        
+            ----전역스코프---- (전체)
+
+        ex) function 함수명(){
+        
+            여긴 ----지역스코프----
+
+             }
+        
+        
+        */
+        // 전역스코프임 이건
+        let a = 10;
+
+        function sum(){
+
+            //여긴 지역 스코프 , 전역 변수값 얻어 사용 가능함 
+            console.log(`함수 내부 : ${a}`);
+
+        }
+        // 여긴 전역스코프임임 , 전역 변수값 얻어서 사용
+        sum();
+        console.log(`함수 외부 :${a}`);
+
+        console.log("---------------------------------")
+
+        function sum2(){
+            //지역변수영역
+            let b = 10;
+            console.log(`함수 내부 영역 : ${b}`);
+        }
+        sum2();
+        console.log(`함수 외부 영역 : ${b}`);
+        //global.html:45 Uncaught ReferenceError: b is not defined
+
+    </script>
+</body>
+</html>

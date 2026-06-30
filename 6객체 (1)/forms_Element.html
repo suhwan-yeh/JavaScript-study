@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="frm1">
+        <label for="uname">이름</label>
+        <input type="text" id ="uname" name="uname" value="김길동">
+    </form>
+
+    <form name="frm2">
+        <label for="age">나이</label>
+        <input type="text" id ="age" name="age" value="">
+    </form>
+
+    <select id="gender" name = "gender">
+        <option value="male">남</option>
+        <option value="female">여</option>
+    </select>
+
+    
+    <button type="submit">전송</button>
+
+
+
+    <script>
+        /*
+            1. <form> ....</form> 선택 해 옴 
+            방법 : document.frm1
+
+            2. <form name="frm1"> ....</form> 내부에 작성된 하위 입력 할 수 있는 자식태그들을
+                모두 HTMLFormControlsCollection 배열 메모리에 담아 배열메모리 자체 반환
+            방법 : document.elements
+        */
+        const HCC = document.frm1.elements;
+        console.log(HCC); 
+
+        const label1 = HCC[0];
+
+        const input4 = document.frm1.age;
+        console.log(input4);
+
+        document.forms[0].gender;
+
+        const selectElement = documnet.forms[0].gender;
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

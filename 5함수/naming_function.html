@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            방법2. 함수 표현식 const 상수명 = function키워드로 함수 정의 및 매개변수 처리
+                방법2.1 이름이 있는 함수 정의 문법   
+
+                 -> const 상수명 = function(매개변수){
+                        실행할 코드;
+                        return 반환값;
+                     }; 
+                        상수명(인수1, 인수2);
+        */
+
+        //실습1. 함수표현식 작성 방법(네이밍 함수형태)으로 구구단 3단을 반복해서 출력하는 기능의 함수 정의
+
+        const gugudan = function naming(){  // <-- 이름이 존재하는 naming 함수
+
+            //구구단에서 곱하는 수 만큼 반복해서 3단출력
+            for(let i = 1; i<=9; i++){
+                console.log(`3 * ${i} = ${3 * i}`);
+            }    
+        };
+
+        //위 정의 해놓은 naming 함수 호출 ㄱㄱ
+        //호출방법 : 상수명();
+
+             gugudan();
+             console.log("--------------------------------");
+
+        //실습2. 함수표현식 작성 방법 (익명 함수형태)로 구구단 4단을 반복해서 출력하는 기능의 함수 정의
+
+        const gugudan2 = function(){ // <-- 이름이 존재하지 않는 익명함수
+            for(let i = 1; i<=9; i++){
+
+                console.log(`4 * ${i} = ${4 * i}`);
+            }
+        };
+        // 위 정의 해놓은 4단 익명함수 호출 ㄱㄱ
+        //호출방법 : 상수명();
+        gugudan2();
+
+
+        /*
+        결론
+            함수 표현식으로 함수 정의할때 const키워드 주로 사용
+            let 키워드 사용해도 상관없음
+            but const 키워드로 정의한느게 좋음
+            보통 함수는 일관된 목적을 가진 코드 집합이라 코드 수정하면 안되는 경우라서서
+        */
+
+
+
+
+
+    </script>
+</body>
+</html>

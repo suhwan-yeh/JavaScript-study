@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <form name="frm1">
+        <input type="text" name="userid">
+    </form>
+
+
+    <form name="frm2">
+        <input type="text" name="username">
+    </form>
+
+
+    <form name="frm3">
+        <input type="text" name="usernick">
+    </form>
+
+    <script>
+        /*
+            <form> 요소노드를 선택해서 가져오는 방법
+
+                html 문서에 작성된 <form>은 document 최상위 부모노드 객체를 이용해 선택 할 수 있습니다.
+                2가지 방법으로 <form>을 선택합니다
+                
+                방법1. <form>요소의 name 속성값을 이용해 직접 선택하는 방법
+                방법2. document 객체의 forms 속성을 이용해 선택하는 방법
+        
+        */
+       // ---------------------------------------------------------------------------------------------
+       /*
+            <form> 요소노드 선택해서 가져오는 방법1.
+                -> <form>요소의 name 속성에 부여된 값을 이용해 <form>을 선택하는 방법
+            문법
+                    document.form 요소에 설정된 name속성값;
+       */
+
+            console.log(document.frm1);
+
+            console.log(document.frm2);
+            
+            console.log(document.frm3);
+
+        // ---------------------------------------------------------------------------------------------
+           const HTMLVollections = document.forms;
+           console.log( HTMLCollections[0]);
+           console.log( HTMLCollections[1]);
+           console.log( HTMLCollections[2]);
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

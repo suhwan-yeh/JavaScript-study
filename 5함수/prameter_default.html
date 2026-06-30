@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //x 함수 선언
+        function x(a,b){
+            console.log(a,b);
+        }x(1,2);
+
+        console.log("-----------------------------");
+
+        //y 함수 선언
+        function y(num1,num2){
+
+            console.log(num1, num2);
+        }
+        y();
+
+        console.log("------------------------------");
+
+        //z 함수 선언
+        function z(){
+
+            console.log("매개변수 없으르모 인수를 전달받아 사용x, 오류가 발생하지 않음");
+
+        }z(10,20);
+
+        //화살표 함수 정의시 매개변수 작성 방법
+        // const 상수명 = (매개변수1, 매개변수2) => {매개변수1, 매개변수2 값을 사용해서 기능을 코드로작성;};
+
+        // 화살표 함수 선언
+        const s = (num1,num2) => {console.log(num1,num2);};
+        s(1,2);
+
+        //화살표 함수 선언
+        const s2 = num1 => console.log(num1);
+        s2(100);
+
+
+
+    </script>
+</body>
+</html>

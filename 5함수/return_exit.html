@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            sum함수 선언
+            기능 : 두개의 인수를 매개변수로 각각 전달 받아
+                  전달 받은 인수의 자료형이 number(숫자)의 형태이면?
+                  두 인수를 더해서 더한 결과값 하나를 반환하고
+                  전달 받은 인수의 자료형이 number(숫자)가 아니면?
+                  함수의 {}중괄호를 즉시 빠져나가게 해서 종료시키는 기능 
+        */
+        function sum(num1, num2){
+            if(typeof num1 !== "number" || typeof num2 !== "number"){
+                return; // sum 함수의 { }를 빠져 나가 함수 기능 즉시 종료
+            }
+            //num1 num2 매개변수로 각각 전달 받은 인수의 자료형이 숫자 형태이면?
+            return num1 + num2;
+
+        }// "a"와"b"는 숫자 형태의 데이터가 아니기 때문에 합을 구할 수 없어서 return num1 + num2; 문에 의해 결괏값을 반환받지 못함
+        let result = sum("a","b");
+        console.log(result);
+
+        let result2 = sum(1, 11);
+        console.log(result2);
+
+        console.log("----------------")
+
+
+
+
+
+
+        //화살표함수 위에꺼랑 똑같이 ㄱㄱ
+        const sum2=(num1, num2)=>{
+
+            if(typeof num1 !== "number" || typeof num2 !== "number"){
+                return; // <- 함수종료료
+            }
+            return num1 + num2; // <- 함수 호출한 줄의 코드 자리로 계산된 결과값을 되돌려줌 (반환)
+        };
+        let result3 = sum2(2,10);
+        console.log(result3);
+
+
+
+
+
+
+
+        const sum3 = (num1, num2) => num1 + num2;
+        sum3(10,20);
+
+
+
+
+    </script>
+</body>
+</html>

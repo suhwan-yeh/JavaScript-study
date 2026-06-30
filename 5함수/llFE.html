@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            즉시 실행 함수?
+            - 함수를 선언하는 동시에 바로 호출해서 실행하는 함수 
+
+            작성 방법
+            - 
+                (function함수명(){ 실행코드; }) 함수명();
+                
+                (function함수명(){ 
+                    실행코드; 
+                }) 함수명();
+
+                (function(){실행코드;}) ();
+             
+                (function(매개변수){
+            
+                실행코드;            
+            })
+        */
+            (function init(){
+                console.log("initialized");
+
+
+            })();
+            //재호출 가능함
+            init();
+
+
+    </script>
+</body>
+</html>
