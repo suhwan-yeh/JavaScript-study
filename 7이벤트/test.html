@@ -6,18 +6,34 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="parent" style="padding : 20px; background-color: lightblue;">
+    <div id="parent" style="padding:20px;  background-color:lightblue;">
         Parent
-        <div>
-            <div id="child" style="padding : 20px; background-color: red;">
-        </div>
+            <div id="child" style="padding:20px; background-color: lightcoral;  ">
+                Child
+            </div>
     </div>
+    <script>
+        document.getElementById("parent").addEventListener('click', function(){
+
+            alert('Parent capturing');
+
+        }, true);
+        document.getElementById("child").addEventListener('click', function(){
+
+            alert('Child capturing');
+
+        }, false);
+
+
+        /*
+            캡처링 단계 이벤트처리 
+             - 이벤트 등록 메소드 addEventListener 메소드에 true로 설정되어 
+               캡처링 단계에서 이벤트를 처리 합니다.
+               이벤트가 'Child' <div>요소에 도달하기 전에 'Parent' <div>요소에 먼저 click이벤트를 처리 합니다.
+        */
+
+    </script>
+
+
 </body>
-<script>
-        document.getElementById("parent").addEventListener('crilk', function(){}, {capture:true})
-
-
-
-
-</script>
 </html>
